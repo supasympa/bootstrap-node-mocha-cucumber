@@ -9,7 +9,7 @@
   },
   "scripts": {
     "pretest": "tsc ./features/step_definitions/account.steps.ts",
-    "test":"npm run test:unit && npm run test:acceptance",
+    "test": "npm run test:unit && npm run test:acceptance",
     "test:acceptance": "cucumberjs",
     "test:acceptance:watch": "nodemon --watch ./src --watch ./features --exec \"npm run test:acceptance\" -e .ts,feature",
     "test:unit": "mocha  --compilers ts:ts-node/register,tsx:ts-node/register",
