@@ -1,0 +1,42 @@
+{
+  "name": "bootstrap-ts",
+  "version": "1.0.0",
+  "description": "Bootstrap a Typescript project",
+  "main": "lib/index.js",
+  "engines": {
+    "node": "^8.0.0",
+    "npm": "^5.2.0"
+  },
+  "scripts": {
+    "pretest": "tsc ./features/step_definitions/account.steps.ts",
+    "test":"npm run test:unit && npm run test:acceptance",
+    "test:acceptance": "cucumberjs",
+    "test:acceptance:watch": "nodemon --watch ./src --watch ./features --exec \"npm run test:acceptance\" -e .ts,feature",
+    "test:unit": "mocha  --compilers ts:ts-node/register,tsx:ts-node/register",
+    "test:unit:watch": "nodemon --watch ./src --watch ./test --exec \"npm run test:unit\" -e .ts",
+    "tslint": "tslint",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitbub.com/supasympa/bootstrap-bdd-tdd"
+  },
+  "author": "Lewis Barclay",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/chai": "^4.0.2",
+    "@types/cucumber": "^2.0.3",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.19",
+    "chai": "^4.1.0",
+    "cucumber": "^2.3.1",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "npm-watch": "^0.2.0",
+    "shelljs": "0.7.8",
+    "ts-node": "^3.3.0",
+    "tslint": "5.5.0",
+    "typescript": "2.4.2"
+  },
+  "dependencies": {}
+}
