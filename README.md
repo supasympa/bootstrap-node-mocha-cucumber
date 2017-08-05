@@ -4,10 +4,11 @@ To test
 
         npm test
         
-To test a specific scenario
+To test a specific BDD scenario
 
-        npm test -- --name "Access account alternate user"
+        npm test:acceptance -- --name "Access account alternate user"
         
 To run tests on change
 
-    npm test:watch               
+        npm test:acceptance:watch
+        npm test:unit:watch               
