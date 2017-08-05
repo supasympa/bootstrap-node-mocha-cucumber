@@ -1,4 +1,4 @@
-# Bootstrap a node (typescript) project with  cucumber & mocha tests 
+# Bootstrap a Node (TypeScript) project with CucumberJS & Mocha tests 
 
 To test 
 
